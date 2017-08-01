@@ -1,0 +1,68 @@
+<view>
+    <swiper style="height:730rpx;" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{product.imagelist}}" wx:for-item="slide" wx:key="id">
+        <swiper-item>
+          <navigator url="{{slide.url}}">
+            <image class="head-img" src="{{slide.url}}" mode="aspectFit"/>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  
+  <!--<view>
+    <image class="head-img" src="{{product.imagelist[0].url}}" mode="aspectFit" />
+  </view>-->
+  <view style="margin-top:20rpx;margin-left:15rpx;">
+  <text class="product-name">{{product.proName}}</text>
+  <text style="margin-left:20rpx;" class="product-name">{{product.proHead}}</text></view>
+  <view>
+    <form>
+      <view class="line">
+        <view class="section price">
+          <!--<view wx:if="{{ accountType === '巴爷' }}">
+            <text id="price">巴爷价：¥{{product.productPrice}}</text>
+          </view>-->
+            <view style="align-items:center;display:flex;">
+              <text id="price" style="color:#f05912;">¥ {{product.proRateprice}}<text style="color:white;margin-left:-3rpx;">1</text></text>
+              <text style="border:1px #f05912 solid;border-radius:5rpx;font-size:22rpx;color:#f05912">促销价</text>
+            </view>
+            <view>
+              <text id="price" style="display:block;font-size:25rpx;margin-top:20rpx;color:darkgrey">价格 <text style="text-decoration:line-through">\r\r ¥ {{product.productPrice}}</text></text>
+            <view style="font-size:25rpx;margin-top:10rpx;">
+              <text class="nav-item">快递：<text>0.00</text></text>
+              <text class="nav-item" style="text-align:center;">月销: <text>{{product.proSum}}</text> 笔</text>
+              <text class="nav-item" style="text-align:right;">{{product.proArea}}</text>
+            </view>
+            <!-- <text id="price">出厂地：{{product.proArea}}   </text>
+            <text id="price">销售地区：{{product.proArea}}   </text>
+            <text id="price">月销{{product.proSum}}   </text> -->
+          </view>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button bindtap="bindAddToCart" type="primary">加入购物车</button>
+      </view>
+    </form>
+  </view>
+
+
+  <view class="separate"></view>
+
+
+  <view>
+    pingjia
+  </view>
+  
+  <view class="separate"></view>
+  <view class="desc-container"  >
+    <block wx:for="{{descPir}}" wx:for-item="desc" wx:key="id">
+      <!--<view wx:if="{{desc[1] === '750'}}">
+        <image class="desc-image" src="{{desc[0]}}" style="height: {{desc[2]}}rpx; width: {{desc[1]}}rpx;" mode="aspectFit"/>
+      </view>
+      <view wx:else>
+        <image class="desc-image" src="{{desc[0]}}" style="height: {{desc[2] / desc[1] * windowWidth}}px;" mode="aspectFit"/>
+      </view>-->
+        <image class="desc-image"src="{{desc}}" mode="widthFix"/>
+    </block>
+  </view>
+</view>

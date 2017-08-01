@@ -1,0 +1,51 @@
+<view class="userinfo" style="height:160px;">
+  <image style="margin-top:46px;" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <text class="userinfo-nickname">{{baye_rank ? baye_rank : ''}}</text>
+</view>
+<view class="separate"></view>
+<view style="height:75rpx;" bindtap="bindShowOrder" data-id="0">
+<text style="font-size:30rpx;margin-left:10px;color: #272727;float:left;padding-top:20rpx;">我的订单</text>
+ <image style="width:10px;height:12px;margin-right:36rpx;padding-top:25rpx;float:right;" src="../../images/mine-go.jpg"></image> 
+</view>
+<view class="separate" style="height:1px;"></view>
+<view>
+<view style="height:20px;"></view>
+<view>
+    <view style="float:left;width:23%;margin-left:8%" bindtap="bindShowOrder" data-id="0">
+      <image style="height:30px;width:40px;" src="../../images/mine-pay.jpg"></image>
+      <view>
+      <text style="font-size:25rpx;color:gray;">待付款</text>
+    </view>
+    </view>
+      <view style="float:left;width:23%"  bindtap="bindShowOrder" data-id="1">
+      <image style="height:30px;width:40px;" src="../../images/mine-give.jpg"></image>
+    <view>
+    <text style="font-size:25rpx;color:gray;">待发货</text>
+    </view>
+    </view>
+     <view style="float:left;width:23%;"bindtap="bindShowOrder" data-id="2">
+    <image style="height:30px;width:40px;" src="../../images/mine-git.jpg"></image>
+    <view>
+    <text style="font-size:25rpx;color:gray;">待收货</text>
+    </view>
+    </view>
+     <view style="float:left;width:23%"bindtap="bindShowOrder" data-id="3">
+    <image style="height:30px;width:40px;" src="../../images/mine-finish.jpg"></image>
+    <view>
+    <text style="font-size:25rpx;color:gray;">已完成</text>
+    </view>
+    </view>
+</view>
+</view>
+<view class="separate" style="margin-top:60px"></view>
+<view style="height:75rpx;">
+<text class="left-tip">关于我们</text>
+<image class="rignt-go" src="../../images/mine-go.jpg"></image>
+</view>
+<view class="separate"></view>
+<view style="height:75rpx;">
+<text class="left-tip">联系客服</text>
+<image class="rignt-go" src="../../images/mine-go.jpg"></image>
+</view>
+<view class="separate" style="height:185px;"></view>
